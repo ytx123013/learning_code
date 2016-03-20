@@ -1,3 +1,5 @@
+#coding=utf-8  
+
 critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
  'Just My Luck': 3.0, 'Superman Returns': 3.5, 'You, Me and Dupree': 2.5, 
  'The Night Listener': 3.0},
@@ -18,6 +20,7 @@ critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
 
 from math import sqrt
 
+# 欧几里得距离
 def Euclidean_Distance(prefs_data,person1,person2):
 	sim = {}
 	for movie in prefs_data[person1]:
@@ -29,7 +32,8 @@ def Euclidean_Distance(prefs_data,person1,person2):
 	sum_of_distance = sum([pow(prefs_data[person1][movie] - prefs_data[person2][movie],2)
 						for movie in sim])
 	return 1/(1+sqrt(sum_of_distance))
-		
+
+# 皮尔逊相关系数		
 def Pearson_Correlation_Coefficient(prefs,p1,p2):
 	si={}
 	for item in prefs[p1]: 
@@ -62,6 +66,14 @@ def Pearson_Correlation_Coefficient(prefs,p1,p2):
 	r=num/den
 	return r
 
+def topMatches(prefs_data,people,n = 5, similarity = Pearson_Correlation_Coefficient):
+	scores = [(similarity(prefs_data,people,other),other) 
+		for other in prefs_data if other != people]
+	scores.sort()
+	scores.reverse()
+	return scores[0:n]
 
-distance = Pearson_Correlation_Coefficient(critics,'Lisa Rose','Gene Seymour')
-print distance
+top = topMatches(critics,'Toby',n = 4)
+print top
+# distance = Pearson_Correlation_Coefficient(critics,'Lisa Rose','Gene Seymour')
+# print distance
