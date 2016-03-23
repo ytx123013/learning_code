@@ -33,7 +33,7 @@ def Euclidean_Distance(prefs_data,person1,person2):
 						for movie in sim])
 	return 1/(1+sqrt(sum_of_distance))
 
-# 皮尔逊相关系数		
+# 计算两个人之间皮尔逊相关系数		
 def Pearson_Correlation_Coefficient(prefs,p1,p2):
 	si={}
 	for item in prefs[p1]: 
@@ -66,8 +66,8 @@ def Pearson_Correlation_Coefficient(prefs,p1,p2):
 	r=num/den
 	return r
 
-def topMatches(prefs_data,people,n = 5, similarity = Pearson_Correlation_Coefficient):
-	scores = [(similarity(prefs_data,people,other),other) 
+def topMatches(prefs_data,people,n = 5, similarity_func = Pearson_Correlation_Coefficient):
+	scores = [(similarity_func(prefs_data,people,other),other) 
 		for other in prefs_data if other != people]
 	scores.sort()
 	scores.reverse()
@@ -75,5 +75,50 @@ def topMatches(prefs_data,people,n = 5, similarity = Pearson_Correlation_Coeffic
 
 top = topMatches(critics,'Toby',n = 4)
 print top
+
+# 加权进行计算
+def getRecommendations(prefs_data,person,similarity_func = Pearson_Correlation_Coefficient):
+	# 每种item的评分总和
+	totals = {}
+	# 每种item相似度之和
+	sim_sum = {}
+	for other_person in prefs_data:
+		# 排除自己
+		if other_person != person:
+			# 算出关联度
+			sim = similarity_func(prefs_data,person,other_person)
+			if sim <= 0:
+				continue
+			for item in prefs_data[other_person]:
+				# 评价未看过的电影
+				if item not in prefs_data[person]:
+					totals.setdefault(item,0)
+					# 评分＊相似系数
+					totals[item] += prefs_data[other_person][item]*sim
+					sim_sum.setdefault(item,0)
+					sim_sum[item] += sim
+
+
+	rankings = [(total/sim_sum[item],item) for item,total in totals.items()]
+	rankings.sort()
+	rankings.reverse()
+	return rankings;
+
+rank = getRecommendations(critics,'Toby')
+print rank
+
+# 将user和movie反转
+def transformPrefs(prefs_data):
+	result = {}
+	for person in prefs_data:
+		for item in prefs_data[person]:
+			result.setdefault(item,{})
+			result[item][person] = prefs_data[person][item]
+	return result
+
+result = transformPrefs(critics)
+# print result
+
+print getRecommendations(result,'Just My Luck')
 # distance = Pearson_Correlation_Coefficient(critics,'Lisa Rose','Gene Seymour')
 # print distance
