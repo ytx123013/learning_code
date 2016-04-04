@@ -1,3 +1,4 @@
+笔记总结于[这个网站](http://www.scipy-lectures.org)
 #Python 基础内容
 ##条件判断
 ***
