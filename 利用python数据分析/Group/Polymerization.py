@@ -24,7 +24,7 @@ a = data1.agg(peak_to_peak)
 
 tips = pd.read_csv('resources/tips.csv')
 tips['tip_pct'] = tips['tip']/tips['total_bill']
-# print tips
+print tips
 
 grouped = tips.groupby(['sex','smoker'])
 # print_groupyby_two(grouped)
