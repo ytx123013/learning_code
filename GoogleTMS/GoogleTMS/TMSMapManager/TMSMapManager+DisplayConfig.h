@@ -1,0 +1,19 @@
+//
+//  TMSMapManager+DisplayConfig.h
+//  GoogleTMS
+//
+//  Created by aa on 16/7/20.
+//  Copyright © 2016年 yunlian. All rights reserved.
+//
+
+#import "TMSMapManager.h"
+#import <CoreGraphics/CGGeometry.h>
+
+@interface TMSMapManager (DisplayConfig)
+
+- (void)setMapZoomLevel:(int)zoomLevel;
+- (int)getMapZoomLevel;
+
+- (CGSize)getMapTileSize;
+
+@end

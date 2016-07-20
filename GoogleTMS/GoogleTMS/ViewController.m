@@ -39,7 +39,7 @@
     
     [self.view addSubview:self.TopVIew];
     [self.view addSubview:self.zoom];
-    UIImageView
+    
 }
 
 - (IBAction)locate:(id)sender
