@@ -10,6 +10,8 @@
 
 @interface MapBaseView : UIView
 
+
+
 @property (nonatomic,strong) NSMutableArray     *mapTiles;
 @property (nonatomic,assign) NSInteger           countOfMapTiles;
 

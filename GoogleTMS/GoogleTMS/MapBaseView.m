@@ -11,6 +11,7 @@
 #import "MapTileConvert.h"
 #import "NetMacro.h"
 #import <UIImageView+WebCache.h>
+#import "TMSMapManager+DisplayConfig.h"
 
 @implementation MapBaseView
 
@@ -18,6 +19,7 @@
 {
 
     if (self = [super initWithFrame:frame]) {
+        CGSize mapTileSize = [[TMSMapManager sharedManager] getDefaultMapTileSize];
         self.countOfMapTiles = kCountOfHorizontalMapTile * kCountOfVerticalMapTile;
         self.mapTiles = [[NSMutableArray alloc] init];
         for (int i = 0; i < self.countOfMapTiles; i++) {
@@ -52,7 +54,6 @@
         int xIndex = [[xIndexArray objectAtIndex:z] intValue];
         int yIndex = [[yIndexArray objectAtIndex:z] intValue];
         NSURL *imageURL = [NSURL URLWithString:MapTileUrl(xIndex, yIndex, level)];
-        NSLog(@"%@",imageURL);
         [imageView sd_setImageWithURL:imageURL];
     }
 }

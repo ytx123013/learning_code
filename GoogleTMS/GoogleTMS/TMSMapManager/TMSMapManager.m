@@ -24,4 +24,12 @@
     return __sharedManager__;
 }
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.mapTilesArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

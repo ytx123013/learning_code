@@ -11,9 +11,25 @@
 
 @interface TMSMapManager (DisplayConfig)
 
-- (void)setMapZoomLevel:(int)zoomLevel;
-- (int)getMapZoomLevel;
+//- (void)setMaxZoomLevel:(int)maxZoomLevel;
+//- (int)getMaxZoomLevel;
+//
+//
+//- (void)setMapZoomLevel:(int)zoomLevel;
+//- (int)getMapZoomLevel;
+//
+//- (void)setMapTileSize:(CGSize)mapTileSize;
+//- (CGSize)getMapTileSize;
+//
+//- (int)getXCountWithZoomLevel:(int)zoomLevel;
+//- (int)getYCountWithZoomLevel:(int)zoomLevel;
+//
+//- (CGSize)getBGViewSizeWithMapZoomLevel:(int)zoomLevel;
 
-- (CGSize)getMapTileSize;
+- (int)getDefaultMinZoomLevel;
+- (int)getDefaultMaxZoomLevel;
+- (CGSize)getDefaultMapTileSize;
+
+
 
 @end

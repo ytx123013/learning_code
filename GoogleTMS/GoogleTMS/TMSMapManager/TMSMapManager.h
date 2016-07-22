@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CGGeometry.h>
 
 @interface TMSMapManager : NSObject
 
-@property (nonatomic,assign) int             zoomLevel;
+@property (nonatomic,assign) int                     zoomLevel;
+@property (nonatomic,assign) int                     maxZoomLevel;
+@property (nonatomic,assign) CGSize                  mapTileSize;
+
+@property (nonatomic,strong) NSMutableArray         *mapTilesArray;
 
 + (instancetype)sharedManager;
 
