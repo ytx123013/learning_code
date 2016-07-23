@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGGeometry.h>
+#import "TMSMapScrollView.h"
 
 @interface TMSMapManager : NSObject
 
@@ -16,7 +17,11 @@
 @property (nonatomic,assign) CGSize                  mapTileSize;
 
 @property (nonatomic,strong) NSMutableArray         *mapTilesArray;
+@property (nonatomic,strong) NSArray                *mapTileImageViewsArray;
+
+@property (nonatomic,strong) TMSMapScrollView       *mapScrollView;
 
 + (instancetype)sharedManager;
+- (void)initData;
 
 @end

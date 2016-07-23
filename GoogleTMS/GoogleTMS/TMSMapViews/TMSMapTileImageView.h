@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapTileInfoModel.h"
 
 @interface TMSMapTileImageView : UIImageView
+
+@property (nonatomic,strong) MapTileInfoModel       *infoModel;
+
+- (instancetype)initWithInfoModel:(MapTileInfoModel *)model;
+
+- (void)loadMapTileImage;
 
 @end

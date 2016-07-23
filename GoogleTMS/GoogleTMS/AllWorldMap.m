@@ -42,7 +42,8 @@ static int MapTileHeight = 256;
 - (void)resetViewFrame
 {
     self.bounces = NO;
-    CGSize bgSize = [[TMSMapManager sharedManager] getBGViewSizeWithMapZoomLevel:kZoomLevel];
+//    CGSize bgSize = [[TMSMapManager sharedManager] getBGViewSizeWithMapZoomLevel:kZoomLevel];
+    CGSize bgSize = CGSizeZero;
     self.bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, MapTileWidth*[self getXCount], MapTileHeight*[self getYCount])];
     CGSize mapTileSize = [[TMSMapManager sharedManager] getDefaultMapTileSize];
     self.frame = CGRectMake(0, 0, kScreenSize.width, kScreenSize.height);

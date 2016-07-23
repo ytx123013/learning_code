@@ -28,8 +28,14 @@
 {
     if (self = [super init]) {
         self.mapTilesArray = [[NSMutableArray alloc] init];
+        self.mapScrollView = [[TMSMapScrollView alloc] init];
     }
     return self;
+}
+
+- (void)initData
+{
+    [self.mapScrollView initalMapView];
 }
 
 @end

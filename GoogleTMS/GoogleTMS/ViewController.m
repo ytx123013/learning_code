@@ -11,6 +11,10 @@
 #import "MapTileConvert.h"
 #import "UIMacro.h"
 #import "AllWorldMap.h"
+#import "TMSMapManager.h"
+#import "TMSMapManager+MapScrollViewOperations.h"
+#import "TMSMapManager+DisplayConfig.h"
+#import "MapTileUtil.h"
 
 @interface ViewController ()<UIScrollViewDelegate>
 
@@ -43,7 +47,7 @@
     
     [self.view addSubview:self.TopVIew];
     [self.view addSubview:self.zoom];*/
-    AllWorldMap *map = [[AllWorldMap alloc] init];
+/*    AllWorldMap *map = [[AllWorldMap alloc] init];
     self.allWorldMap = map;
 //    UIPinchGestureRecognizer *ges = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
     [map resetViewFrame];
@@ -53,12 +57,19 @@
     map.bouncesZoom = NO;
     map.delegate = self;
     
-    [self.view addSubview:map];
+    [self.view addSubview:map];*/
 //    map.canCancelContentTouches=NO;
 //    map.showsHorizontalScrollIndicator = NO;
 //    map.showsVerticalScrollIndicator = NO;
     
 //    map.delaysContentTouches=NO;
+    self.zoomLevel = 2;
+    [[TMSMapManager sharedManager] initData];
+    TMSMapScrollView *scrollView = [[TMSMapManager sharedManager] getMapScrollView];
+    scrollView.delegate = self;
+    
+    [self.view addSubview:scrollView];
+    [[TMSMapManager sharedManager] loadMapTilesInRect:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height) atZoomLevel:self.zoomLevel];
     
 }
 
@@ -70,17 +81,26 @@
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
 {
     NSLog(@"%d",(int)scale);
+    CGRect visiableRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, kScreenSize.width, kScreenSize.height);
+    CGSize oriSize = [MapTileUtil getBaseMapViewSizeWithZoomLevel:2];
+    int count = (int)view.frame.size.width/256;
+    double zoom = log2((double)count);
+    NSLog(@"%d",(int)zoom);
+    self.zoomLevel = self.zoomLevel * scale ;
+    [[TMSMapManager sharedManager] loadMapTilesInRect:visiableRect atZoomLevel:zoom];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-    return self.allWorldMap.bgImageView;
+    return [[TMSMapManager sharedManager] getMapScrollView].baseMapView;
 }
 
 
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    CGRect visiableRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, kScreenSize.width, kScreenSize.height);
+    [[TMSMapManager sharedManager] loadMapTilesInRect:visiableRect atZoomLevel:self.zoomLevel];
     NSLog(@"end deceleration");
 }
 

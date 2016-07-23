@@ -23,6 +23,10 @@
 		00E469CE1D406E0100167F00 /* AllWorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E469CD1D406E0100167F00 /* AllWorldMap.m */; };
 		00E9097C1D3CC1A30043CA69 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E9097B1D3CC1A30043CA69 /* 1.png */; };
 		00E909801D3CC78B0043CA69 /* MapTileConvert.c in Sources */ = {isa = PBXBuildFile; fileRef = 00E9097E1D3CC78B0043CA69 /* MapTileConvert.c */; };
+		00F360EF1D43142300C3B34A /* MapTileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F360EE1D43142300C3B34A /* MapTileUtil.m */; };
+		00F360F21D43198200C3B34A /* MapTileInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F360F11D43198200C3B34A /* MapTileInfoModel.m */; };
+		00F360F51D432C9B00C3B34A /* TMSBaseMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F360F41D432C9B00C3B34A /* TMSBaseMapView.m */; };
+		00F360FB1D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F360FA1D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.m */; };
 		5AAC09458DC9E34599D3D01F /* libPods-GoogleTMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA2522131A65AA639F34613 /* libPods-GoogleTMS.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,14 @@
 		00E9097E1D3CC78B0043CA69 /* MapTileConvert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MapTileConvert.c; sourceTree = "<group>"; };
 		00E9097F1D3CC78B0043CA69 /* MapTileConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTileConvert.h; sourceTree = "<group>"; };
 		00E909811D3CCDFA0043CA69 /* NetMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetMacro.h; sourceTree = "<group>"; };
+		00F360ED1D43142300C3B34A /* MapTileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTileUtil.h; sourceTree = "<group>"; };
+		00F360EE1D43142300C3B34A /* MapTileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTileUtil.m; sourceTree = "<group>"; };
+		00F360F01D43198200C3B34A /* MapTileInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTileInfoModel.h; sourceTree = "<group>"; };
+		00F360F11D43198200C3B34A /* MapTileInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTileInfoModel.m; sourceTree = "<group>"; };
+		00F360F31D432C9B00C3B34A /* TMSBaseMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSBaseMapView.h; sourceTree = "<group>"; };
+		00F360F41D432C9B00C3B34A /* TMSBaseMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSBaseMapView.m; sourceTree = "<group>"; };
+		00F360F91D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMSMapManager+MapScrollViewOperations.h"; sourceTree = "<group>"; };
+		00F360FA1D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMSMapManager+MapScrollViewOperations.m"; sourceTree = "<group>"; };
 		2565467EA2AF56775738AE4A /* Pods-GoogleTMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleTMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleTMS/Pods-GoogleTMS.debug.xcconfig"; sourceTree = "<group>"; };
 		3AA2522131A65AA639F34613 /* libPods-GoogleTMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleTMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A25ABD08451CD64A0D8FCC4 /* Pods-GoogleTMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleTMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleTMS/Pods-GoogleTMS.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +158,8 @@
 				009FCBD01D3F4E1B003FEDE9 /* TMSMapManager.m */,
 				009FCBD21D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.h */,
 				009FCBD31D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.m */,
+				00F360F91D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.h */,
+				00F360FA1D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.m */,
 			);
 			path = TMSMapManager;
 			sourceTree = "<group>";
@@ -157,6 +171,8 @@
 				00DF67521D41CA1B00492527 /* TMSMapScrollView.m */,
 				00DF67541D41CF4300492527 /* TMSMapTileImageView.h */,
 				00DF67551D41CF4300492527 /* TMSMapTileImageView.m */,
+				00F360F31D432C9B00C3B34A /* TMSBaseMapView.h */,
+				00F360F41D432C9B00C3B34A /* TMSBaseMapView.m */,
 			);
 			path = TMSMapViews;
 			sourceTree = "<group>";
@@ -166,6 +182,10 @@
 			children = (
 				00E9097E1D3CC78B0043CA69 /* MapTileConvert.c */,
 				00E9097F1D3CC78B0043CA69 /* MapTileConvert.h */,
+				00F360ED1D43142300C3B34A /* MapTileUtil.h */,
+				00F360EE1D43142300C3B34A /* MapTileUtil.m */,
+				00F360F01D43198200C3B34A /* MapTileInfoModel.h */,
+				00F360F11D43198200C3B34A /* MapTileInfoModel.m */,
 			);
 			name = MapTileUtil;
 			sourceTree = "<group>";
@@ -312,13 +332,17 @@
 				0092AEC41D3CBE2400BC8911 /* MapBaseView.m in Sources */,
 				0092AEB31D3CBB5800BC8911 /* ViewController.m in Sources */,
 				009FCBD41D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.m in Sources */,
+				00F360F51D432C9B00C3B34A /* TMSBaseMapView.m in Sources */,
 				00D6040C1D3DF0C100FA7FAA /* MapTileImageView.m in Sources */,
 				0092AEB01D3CBB5800BC8911 /* AppDelegate.m in Sources */,
 				00E469CE1D406E0100167F00 /* AllWorldMap.m in Sources */,
+				00F360F21D43198200C3B34A /* MapTileInfoModel.m in Sources */,
 				0092AEAD1D3CBB5800BC8911 /* main.m in Sources */,
 				00DF67531D41CA1B00492527 /* TMSMapScrollView.m in Sources */,
 				00D604091D3DF08800FA7FAA /* BackMapView.m in Sources */,
 				00E909801D3CC78B0043CA69 /* MapTileConvert.c in Sources */,
+				00F360FB1D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.m in Sources */,
+				00F360EF1D43142300C3B34A /* MapTileUtil.m in Sources */,
 				00DF67561D41CF4300492527 /* TMSMapTileImageView.m in Sources */,
 				009FCBD11D3F4E1B003FEDE9 /* TMSMapManager.m in Sources */,
 			);

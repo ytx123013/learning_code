@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "TMSMapTileImageView.h"
+#import "TMSBaseMapView.h"
+#import "TMSMapTileImageView.h"
 
 @interface TMSMapScrollView : UIScrollView
 
+@property (nonatomic,strong) TMSBaseMapView             *baseMapView;
 
+- (void)initalMapView;
+
+- (void)addMapTileImageView:(TMSMapTileImageView *)mapTile;
 
 @end
