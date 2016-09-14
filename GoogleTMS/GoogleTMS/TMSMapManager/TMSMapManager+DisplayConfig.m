@@ -8,8 +8,8 @@
 
 #import "TMSMapManager+DisplayConfig.h"
 
-static CGFloat       kMapTileWidth = 256;
-static CGFloat       kMapTileHeight = 256;
+static CGFloat       kMapTileWidth = 128;
+static CGFloat       kMapTileHeight = 128;
 
 static int           kMapMaxZoomLevel = 22;
 static int           kMapMinZoomLevel = 2;
@@ -58,6 +58,10 @@ static int           kMapMinZoomLevel = 2;
 }
 
 #pragma mark - default value
+- (void)setTMSMapTileImageScale:(float)scale
+{
+    self.mapTileImageScale = scale;
+}
 - (int)getDefaultMinZoomLevel
 {
     return kMapMinZoomLevel;
@@ -67,9 +71,25 @@ static int           kMapMinZoomLevel = 2;
 {
     return kMapMaxZoomLevel;
 }
+
+- (CGSize)getScaledMapTileSize
+{
+    return CGSizeMake(kMapTileWidth*self.mapTileImageScale, kMapTileHeight*self.mapTileImageScale);
+//    return CGSizeMake(kMapTileWidth, kMapTileHeight);
+}
+
 - (CGSize)getDefaultMapTileSize
 {
     return CGSizeMake(kMapTileWidth, kMapTileHeight);
+}
+
+- (void)initalMapDefaultConfig
+{
+    self.minZoomLevel = kMapMinZoomLevel;
+    self.maxZoomLevel = kMapMaxZoomLevel;
+    self.zoomLevel = 2;
+    self.mapTileSize = CGSizeMake(kMapTileWidth, kMapTileHeight);
+    self.mapTileImageScale = 1.0;
 }
 
 @end

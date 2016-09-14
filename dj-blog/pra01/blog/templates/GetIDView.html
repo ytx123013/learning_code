@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<h1>模版变量</h1>
+
+<li>hehehe id: {{id}}</li>
+<li>name : {{name}}</li>
+
+<li>更屌显示 : {{user_info.aaaa}}</li>
+<li>以类为数据源显示名字 : {{person.name}}</li>
+<li>直接调用类的方法 : {{person.getPersonInfo}}</li>
+<li>以列表为数据源显示{{book_list}}</li>
+<li>显示列表某一项{{book_list.1}}</li>
+
+<h1>常用模版标签</h1>
+<h2>if</h2>
+{% if person %}
+<li>person.name</li>
+{% else %}
+<li>没有传名为person的数据</li>
+{% endif %}
+<li>更多可以查看<a href="https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#if">这里</a></li>
+<h2>for</h2>
+{% for book in book_list %}
+<li>bookname : {{book}}</li>
+{% endfor %}
+
+{% for k in user_info %}
+<li>{{k}}</li>
+{% endfor %}
+{% for k,v in user_info.items %}
+<li>key:{{k}},value:{{v}}</li>
+{% empty %}
+<li>传入的字典数据为空</li>
+{% endfor %}
+</body>
+</html>

@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C94A71D4750E100C24759 /* AllWorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C94A01D4750E100C24759 /* AllWorldMap.m */; };
+		000C94A81D4750E100C24759 /* BackMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C94A21D4750E100C24759 /* BackMapView.m */; };
+		000C94A91D4750E100C24759 /* MapBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C94A41D4750E100C24759 /* MapBaseView.m */; };
+		000C94AA1D4750E100C24759 /* MapTileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C94A61D4750E100C24759 /* MapTileImageView.m */; };
 		0092AEAD1D3CBB5800BC8911 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0092AEAC1D3CBB5800BC8911 /* main.m */; };
 		0092AEB01D3CBB5800BC8911 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0092AEAF1D3CBB5800BC8911 /* AppDelegate.m */; };
 		0092AEB31D3CBB5800BC8911 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0092AEB21D3CBB5800BC8911 /* ViewController.m */; };
 		0092AEB61D3CBB5800BC8911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0092AEB41D3CBB5800BC8911 /* Main.storyboard */; };
 		0092AEB81D3CBB5800BC8911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0092AEB71D3CBB5800BC8911 /* Assets.xcassets */; };
 		0092AEBB1D3CBB5800BC8911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0092AEB91D3CBB5800BC8911 /* LaunchScreen.storyboard */; };
-		0092AEC41D3CBE2400BC8911 /* MapBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0092AEC31D3CBE2400BC8911 /* MapBaseView.m */; };
 		009FCBD11D3F4E1B003FEDE9 /* TMSMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FCBD01D3F4E1B003FEDE9 /* TMSMapManager.m */; };
 		009FCBD41D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FCBD31D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.m */; };
-		00D604091D3DF08800FA7FAA /* BackMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D604081D3DF08800FA7FAA /* BackMapView.m */; };
-		00D6040C1D3DF0C100FA7FAA /* MapTileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D6040B1D3DF0C100FA7FAA /* MapTileImageView.m */; };
 		00DF67531D41CA1B00492527 /* TMSMapScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF67521D41CA1B00492527 /* TMSMapScrollView.m */; };
 		00DF67561D41CF4300492527 /* TMSMapTileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF67551D41CF4300492527 /* TMSMapTileImageView.m */; };
-		00E469CE1D406E0100167F00 /* AllWorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E469CD1D406E0100167F00 /* AllWorldMap.m */; };
 		00E9097C1D3CC1A30043CA69 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E9097B1D3CC1A30043CA69 /* 1.png */; };
 		00E909801D3CC78B0043CA69 /* MapTileConvert.c in Sources */ = {isa = PBXBuildFile; fileRef = 00E9097E1D3CC78B0043CA69 /* MapTileConvert.c */; };
 		00F360EF1D43142300C3B34A /* MapTileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F360EE1D43142300C3B34A /* MapTileUtil.m */; };
@@ -31,6 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000C949F1D4750E100C24759 /* AllWorldMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllWorldMap.h; sourceTree = "<group>"; };
+		000C94A01D4750E100C24759 /* AllWorldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllWorldMap.m; sourceTree = "<group>"; };
+		000C94A11D4750E100C24759 /* BackMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackMapView.h; sourceTree = "<group>"; };
+		000C94A21D4750E100C24759 /* BackMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackMapView.m; sourceTree = "<group>"; };
+		000C94A31D4750E100C24759 /* MapBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBaseView.h; sourceTree = "<group>"; };
+		000C94A41D4750E100C24759 /* MapBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBaseView.m; sourceTree = "<group>"; };
+		000C94A51D4750E100C24759 /* MapTileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTileImageView.h; sourceTree = "<group>"; };
+		000C94A61D4750E100C24759 /* MapTileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTileImageView.m; sourceTree = "<group>"; };
 		0092AEA81D3CBB5800BC8911 /* GoogleTMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleTMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0092AEAC1D3CBB5800BC8911 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0092AEAE1D3CBB5800BC8911 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,22 +49,14 @@
 		0092AEB71D3CBB5800BC8911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0092AEBA1D3CBB5800BC8911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0092AEBC1D3CBB5800BC8911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0092AEC21D3CBE2400BC8911 /* MapBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBaseView.h; sourceTree = "<group>"; };
-		0092AEC31D3CBE2400BC8911 /* MapBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBaseView.m; sourceTree = "<group>"; };
 		009FCBCF1D3F4E1B003FEDE9 /* TMSMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSMapManager.h; sourceTree = "<group>"; };
 		009FCBD01D3F4E1B003FEDE9 /* TMSMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSMapManager.m; sourceTree = "<group>"; };
 		009FCBD21D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMSMapManager+DisplayConfig.h"; sourceTree = "<group>"; };
 		009FCBD31D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMSMapManager+DisplayConfig.m"; sourceTree = "<group>"; };
-		00D604071D3DF08800FA7FAA /* BackMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackMapView.h; sourceTree = "<group>"; };
-		00D604081D3DF08800FA7FAA /* BackMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackMapView.m; sourceTree = "<group>"; };
-		00D6040A1D3DF0C100FA7FAA /* MapTileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTileImageView.h; sourceTree = "<group>"; };
-		00D6040B1D3DF0C100FA7FAA /* MapTileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTileImageView.m; sourceTree = "<group>"; };
 		00DF67511D41CA1B00492527 /* TMSMapScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSMapScrollView.h; sourceTree = "<group>"; };
 		00DF67521D41CA1B00492527 /* TMSMapScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSMapScrollView.m; sourceTree = "<group>"; };
 		00DF67541D41CF4300492527 /* TMSMapTileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSMapTileImageView.h; sourceTree = "<group>"; };
 		00DF67551D41CF4300492527 /* TMSMapTileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSMapTileImageView.m; sourceTree = "<group>"; };
-		00E469CC1D406E0100167F00 /* AllWorldMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllWorldMap.h; sourceTree = "<group>"; };
-		00E469CD1D406E0100167F00 /* AllWorldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllWorldMap.m; sourceTree = "<group>"; };
 		00E9097A1D3CC1130043CA69 /* UIMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIMacro.h; sourceTree = "<group>"; };
 		00E9097B1D3CC1A30043CA69 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		00E9097E1D3CC78B0043CA69 /* MapTileConvert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MapTileConvert.c; sourceTree = "<group>"; };
@@ -87,6 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000C949E1D4750D400C24759 /* aa */ = {
+			isa = PBXGroup;
+			children = (
+				000C949F1D4750E100C24759 /* AllWorldMap.h */,
+				000C94A01D4750E100C24759 /* AllWorldMap.m */,
+				000C94A11D4750E100C24759 /* BackMapView.h */,
+				000C94A21D4750E100C24759 /* BackMapView.m */,
+				000C94A31D4750E100C24759 /* MapBaseView.h */,
+				000C94A41D4750E100C24759 /* MapBaseView.m */,
+				000C94A51D4750E100C24759 /* MapTileImageView.h */,
+				000C94A61D4750E100C24759 /* MapTileImageView.m */,
+			);
+			name = aa;
+			sourceTree = "<group>";
+		};
 		0092AE9F1D3CBB5800BC8911 = {
 			isa = PBXGroup;
 			children = (
@@ -108,13 +123,13 @@
 		0092AEAA1D3CBB5800BC8911 /* GoogleTMS */ = {
 			isa = PBXGroup;
 			children = (
+				000C949E1D4750D400C24759 /* aa */,
 				00DF67501D41CA1B00492527 /* TMSMapViews */,
 				009FCBCE1D3F4E1B003FEDE9 /* TMSMapManager */,
 				00E909811D3CCDFA0043CA69 /* NetMacro.h */,
 				00E9097A1D3CC1130043CA69 /* UIMacro.h */,
 				00E9097B1D3CC1A30043CA69 /* 1.png */,
 				00E9097D1D3CC4CC0043CA69 /* MapTileUtil */,
-				0092AEC51D3CBE2700BC8911 /* MapViews */,
 				0092AEAE1D3CBB5800BC8911 /* AppDelegate.h */,
 				0092AEAF1D3CBB5800BC8911 /* AppDelegate.m */,
 				0092AEB11D3CBB5800BC8911 /* ViewController.h */,
@@ -134,21 +149,6 @@
 				0092AEAC1D3CBB5800BC8911 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0092AEC51D3CBE2700BC8911 /* MapViews */ = {
-			isa = PBXGroup;
-			children = (
-				0092AEC21D3CBE2400BC8911 /* MapBaseView.h */,
-				0092AEC31D3CBE2400BC8911 /* MapBaseView.m */,
-				00D604071D3DF08800FA7FAA /* BackMapView.h */,
-				00D604081D3DF08800FA7FAA /* BackMapView.m */,
-				00D6040A1D3DF0C100FA7FAA /* MapTileImageView.h */,
-				00D6040B1D3DF0C100FA7FAA /* MapTileImageView.m */,
-				00E469CC1D406E0100167F00 /* AllWorldMap.h */,
-				00E469CD1D406E0100167F00 /* AllWorldMap.m */,
-			);
-			name = MapViews;
 			sourceTree = "<group>";
 		};
 		009FCBCE1D3F4E1B003FEDE9 /* TMSMapManager */ = {
@@ -329,21 +329,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0092AEC41D3CBE2400BC8911 /* MapBaseView.m in Sources */,
 				0092AEB31D3CBB5800BC8911 /* ViewController.m in Sources */,
 				009FCBD41D3F541C003FEDE9 /* TMSMapManager+DisplayConfig.m in Sources */,
 				00F360F51D432C9B00C3B34A /* TMSBaseMapView.m in Sources */,
-				00D6040C1D3DF0C100FA7FAA /* MapTileImageView.m in Sources */,
 				0092AEB01D3CBB5800BC8911 /* AppDelegate.m in Sources */,
-				00E469CE1D406E0100167F00 /* AllWorldMap.m in Sources */,
 				00F360F21D43198200C3B34A /* MapTileInfoModel.m in Sources */,
 				0092AEAD1D3CBB5800BC8911 /* main.m in Sources */,
+				000C94A71D4750E100C24759 /* AllWorldMap.m in Sources */,
+				000C94AA1D4750E100C24759 /* MapTileImageView.m in Sources */,
 				00DF67531D41CA1B00492527 /* TMSMapScrollView.m in Sources */,
-				00D604091D3DF08800FA7FAA /* BackMapView.m in Sources */,
+				000C94A81D4750E100C24759 /* BackMapView.m in Sources */,
 				00E909801D3CC78B0043CA69 /* MapTileConvert.c in Sources */,
 				00F360FB1D434B2D00C3B34A /* TMSMapManager+MapScrollViewOperations.m in Sources */,
 				00F360EF1D43142300C3B34A /* MapTileUtil.m in Sources */,
 				00DF67561D41CF4300492527 /* TMSMapTileImageView.m in Sources */,
+				000C94A91D4750E100C24759 /* MapBaseView.m in Sources */,
 				009FCBD11D3F4E1B003FEDE9 /* TMSMapManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

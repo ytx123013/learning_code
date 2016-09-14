@@ -19,4 +19,6 @@
 
 - (void)addMapTileImageView:(TMSMapTileImageView *)mapTile;
 
+- (void)resetBaseMapViewWithFrame:(CGRect)frame;
+
 @end

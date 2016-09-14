@@ -75,19 +75,26 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
-    NSLog(@"zooming");
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view
+{
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
 {
-    NSLog(@"%d",(int)scale);
     CGRect visiableRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, kScreenSize.width, kScreenSize.height);
-    CGSize oriSize = [MapTileUtil getBaseMapViewSizeWithZoomLevel:2];
-    int count = (int)view.frame.size.width/256;
-    double zoom = log2((double)count);
-    NSLog(@"%d",(int)zoom);
-    self.zoomLevel = self.zoomLevel * scale ;
-    [[TMSMapManager sharedManager] loadMapTilesInRect:visiableRect atZoomLevel:zoom];
+    self.zoomLevel = [MapTileUtil getZoomLevelWithSize:view.frame.size];
+    float zoomWidth = 128*pow(2, self.zoomLevel);
+    float scaled = view.frame.size.width/zoomWidth;
+    [[TMSMapManager sharedManager] setTMSMapTileImageScale:scaled];
+    TMSBaseMapView *view1 =  [[TMSMapManager sharedManager] getMapScrollView].baseMapView ;
+    [[TMSMapManager sharedManager] resetBaseMapViewWithFrame:view1.frame];
+    if (scale == 1.0000) {
+//        [[TMSMapManager sharedManager] loadMapTilesInRect:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height) atZoomLevel:self.zoomLevel];
+    }else{
+        [[TMSMapManager sharedManager] loadMapTilesInRect:visiableRect atZoomLevel:self.zoomLevel];
+    }
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -95,13 +102,14 @@
     return [[TMSMapManager sharedManager] getMapScrollView].baseMapView;
 }
 
-
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    CGRect visiableRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, kScreenSize.width, kScreenSize.height);
+//    NSLog(@"contentoffset %f %f",scrollView.contentOffset.x,scrollView.contentOffset.y);
+/*    CGRect visiableRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, kScreenSize.width, kScreenSize.height);
     [[TMSMapManager sharedManager] loadMapTilesInRect:visiableRect atZoomLevel:self.zoomLevel];
-    NSLog(@"end deceleration");
+    NSLog(@"end deceleration");*/
+/*    CGRect visiableRect = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, kScreenSize.width, kScreenSize.height);
+    [[TMSMapManager sharedManager] loadMapTilesInRect:visiableRect atZoomLevel:self.zoomLevel];*/
 }
 
 -(void)pinch:(UIPinchGestureRecognizer *)recognizer{

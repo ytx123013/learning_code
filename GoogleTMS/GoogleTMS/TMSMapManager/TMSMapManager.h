@@ -13,8 +13,11 @@
 @interface TMSMapManager : NSObject
 
 @property (nonatomic,assign) int                     zoomLevel;
+@property (nonatomic,assign) int                     minZoomLevel;
 @property (nonatomic,assign) int                     maxZoomLevel;
 @property (nonatomic,assign) CGSize                  mapTileSize;
+@property (nonatomic,assign) float                   mapTileImageScale;
+
 
 @property (nonatomic,strong) NSMutableArray         *mapTilesArray;
 @property (nonatomic,strong) NSArray                *mapTileImageViewsArray;
@@ -23,5 +26,6 @@
 
 + (instancetype)sharedManager;
 - (void)initData;
+- (void)resetBaseMapViewWithFrame:(CGRect)frame;
 
 @end

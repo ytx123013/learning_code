@@ -26,10 +26,14 @@
 //
 //- (CGSize)getBGViewSizeWithMapZoomLevel:(int)zoomLevel;
 
+
+- (void)setTMSMapTileImageScale:(float)scale;
+
 - (int)getDefaultMinZoomLevel;
 - (int)getDefaultMaxZoomLevel;
+- (CGSize)getScaledMapTileSize;
 - (CGSize)getDefaultMapTileSize;
 
-
+- (void)initalMapDefaultConfig;
 
 @end

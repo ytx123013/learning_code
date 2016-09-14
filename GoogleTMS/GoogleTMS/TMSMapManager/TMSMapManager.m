@@ -35,7 +35,13 @@
 
 - (void)initData
 {
+    self.mapTileImageScale = 1.0;
     [self.mapScrollView initalMapView];
+}
+
+- (void)resetBaseMapViewWithFrame:(CGRect)frame;
+{
+    [self.mapScrollView resetBaseMapViewWithFrame:frame];
 }
 
 @end
