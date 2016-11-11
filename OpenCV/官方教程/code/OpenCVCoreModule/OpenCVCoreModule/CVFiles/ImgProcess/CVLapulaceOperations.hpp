@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+void applyLapulaceOperations(Mat &image,Mat &resImage);
+
 #endif /* CVLapulaceOperations_hpp */

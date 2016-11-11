@@ -11,4 +11,12 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+void applyLRReverse(Mat &image,Mat &resImage);
+void applyUDReverse(Mat &image,Mat &resImage);
+void applyLRUDReverse(Mat &image,Mat &resImage);
+
+void applyRemapping(Mat &image,Mat &resImage,Mat &xMap,Mat &yMap);
+
 #endif /* CVRemappingOperations_hpp */

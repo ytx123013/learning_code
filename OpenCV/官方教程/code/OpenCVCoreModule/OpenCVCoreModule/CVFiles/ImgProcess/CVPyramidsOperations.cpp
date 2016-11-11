@@ -7,3 +7,14 @@
 //
 
 #include "CVPyramidsOperations.hpp"
+
+
+void applyUpSample(Mat &image, Mat &resImage, float zoomIn)
+{
+    pyrUp(image, resImage,Size(image.cols * zoomIn,image.rows * zoomIn));
+}
+
+void applyDownSample(Mat &image, Mat &resImage, float zoomOut)
+{
+    pyrDown(image, resImage,Size(image.cols / zoomOut,image.rows / zoomOut));
+}

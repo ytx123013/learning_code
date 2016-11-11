@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+
+
 #endif /* CVAffineTransformOperations_hpp */

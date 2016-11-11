@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+void applySobelDetectOperation(Mat &image,Mat &resImage);
+
 #endif /* CVSobelOperations_hpp */

@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+void applyCannyOperation(Mat &image,Mat &resImage);
+
 #endif /* CVCannyOperations_hpp */

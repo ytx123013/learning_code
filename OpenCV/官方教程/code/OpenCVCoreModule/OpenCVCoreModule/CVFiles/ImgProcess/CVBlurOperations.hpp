@@ -11,4 +11,11 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+void applyNormalizedBoxBlur(Mat &image, Mat &resImage);
+void applyGaussianBlur(Mat &image, Mat &resImage);
+void applyMedianBlur(Mat &image,Mat &resImage);
+void applyBilateralBlur(Mat &image,Mat &resImage);
+
 #endif /* CVBlurOperations_hpp */

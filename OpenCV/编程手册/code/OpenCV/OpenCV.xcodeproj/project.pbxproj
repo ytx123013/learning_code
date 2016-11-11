@@ -14,7 +14,7 @@
 		001D421C1D9625BC008636D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001D421A1D9625BC008636D1 /* Main.storyboard */; };
 		001D421E1D9625BC008636D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001D421D1D9625BC008636D1 /* Assets.xcassets */; };
 		001D42211D9625BC008636D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001D421F1D9625BC008636D1 /* LaunchScreen.storyboard */; };
-		001D42291D962629008636D1 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001D42281D962629008636D1 /* opencv2.framework */; };
+		002BDB1C1DB9BF1600D6471D /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002BDB1B1DB9BF1600D6471D /* opencv2.framework */; };
 		00382EFD1DB5CF2C00140182 /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00382EFC1DB5CF2C00140182 /* 111.jpg */; };
 		00382F031DB5DF8700140182 /* CVThresholding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00382F011DB5DF8700140182 /* CVThresholding.cpp */; };
 		00382F061DB61B1E00140182 /* CVMorphologyOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00382F041DB61B1E00140182 /* CVMorphologyOperations.cpp */; };
@@ -44,8 +44,8 @@
 		001D421D1D9625BC008636D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		001D42201D9625BC008636D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		001D42221D9625BC008636D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		001D42281D962629008636D1 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		001D422A1D9629C8008636D1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		002BDB1B1DB9BF1600D6471D /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		00382EFC1DB5CF2C00140182 /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
 		00382F011DB5DF8700140182 /* CVThresholding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CVThresholding.cpp; sourceTree = "<group>"; };
 		00382F021DB5DF8700140182 /* CVThresholding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CVThresholding.hpp; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001D42291D962629008636D1 /* opencv2.framework in Frameworks */,
+				002BDB1C1DB9BF1600D6471D /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +103,7 @@
 		001D42101D9625BC008636D1 /* OpenCV */ = {
 			isa = PBXGroup;
 			children = (
+				002BDB1B1DB9BF1600D6471D /* opencv2.framework */,
 				00382EFC1DB5CF2C00140182 /* 111.jpg */,
 				00AF28731DAA33330037A3F0 /* logo.png */,
 				00AF286E1DA9FA570037A3F0 /* bbb.jpg */,
@@ -117,7 +118,6 @@
 				001D421D1D9625BC008636D1 /* Assets.xcassets */,
 				001D421F1D9625BC008636D1 /* LaunchScreen.storyboard */,
 				001D42221D9625BC008636D1 /* Info.plist */,
-				001D42281D962629008636D1 /* opencv2.framework */,
 				001D42111D9625BC008636D1 /* Supporting Files */,
 				001D422A1D9629C8008636D1 /* PrefixHeader.pch */,
 			);
@@ -373,6 +373,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenCV",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OpenCV/PrefixHeader.pch";
 				INFOPLIST_FILE = OpenCV/Info.plist;
@@ -394,6 +395,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenCV",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OpenCV/PrefixHeader.pch";
 				INFOPLIST_FILE = OpenCV/Info.plist;

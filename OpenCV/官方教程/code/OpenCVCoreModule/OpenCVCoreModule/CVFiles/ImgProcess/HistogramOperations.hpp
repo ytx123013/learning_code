@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+using namespace cv;
+
+void applyCalcGrayHistogram(Mat &image,Mat &histImage);
+
 #endif /* HistogramOperations_hpp */
