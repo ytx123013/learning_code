@@ -10,4 +10,6 @@
 
 @interface ReadyDependencyOperation : DependencyOperation
 
+- (void)readyToOperate;
+
 @end

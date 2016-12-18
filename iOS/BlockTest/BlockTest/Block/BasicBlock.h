@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef int (^AddOperation)(int,int);
+
 @interface BasicBlock : NSObject
+
+- (void)basicBlockOperation;
+
+- (void)blockVariables;
+
+- (void)typedefBlock;
 
 @end

@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00146E901DDDA8CC00981A48 /* DependencyOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00146E8F1DDDA8CC00981A48 /* DependencyOperation.m */; };
 		0044438E1DDC068A00F9D1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044438D1DDC068A00F9D1B3 /* main.m */; };
 		004443911DDC068A00F9D1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 004443901DDC068A00F9D1B3 /* AppDelegate.m */; };
 		004443941DDC068A00F9D1B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004443931DDC068A00F9D1B3 /* ViewController.m */; };
 		004443971DDC068A00F9D1B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004443951DDC068A00F9D1B3 /* Main.storyboard */; };
 		004443991DDC068A00F9D1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004443981DDC068A00F9D1B3 /* Assets.xcassets */; };
 		0044439C1DDC068A00F9D1B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0044439A1DDC068A00F9D1B3 /* LaunchScreen.storyboard */; };
+		005113831DE7F0CD00FD556B /* DispatchQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 005113821DE7F0CD00FD556B /* DispatchQueueManager.m */; };
+		00692AFF1DEEBBB000CBA5A4 /* DispatchSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00692AFE1DEEBBB000CBA5A4 /* DispatchSourceManager.m */; };
+		0077AC601DDEAEE70029DC74 /* ReadyDependencyOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077AC5F1DDEAEE70029DC74 /* ReadyDependencyOperation.m */; };
+		00DF5B7C1DDD4FD20036E4A0 /* OperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF5B7B1DDD4FD20036E4A0 /* OperationManager.m */; };
+		00DF5B821DDD50400036E4A0 /* BasicOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF5B811DDD50400036E4A0 /* BasicOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00146E8E1DDDA8CC00981A48 /* DependencyOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyOperation.h; sourceTree = "<group>"; };
+		00146E8F1DDDA8CC00981A48 /* DependencyOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyOperation.m; sourceTree = "<group>"; };
 		004443891DDC068A00F9D1B3 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0044438D1DDC068A00F9D1B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0044438F1DDC068A00F9D1B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +34,16 @@
 		004443981DDC068A00F9D1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0044439B1DDC068A00F9D1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0044439D1DDC068A00F9D1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005113811DE7F0CD00FD556B /* DispatchQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueManager.h; sourceTree = "<group>"; };
+		005113821DE7F0CD00FD556B /* DispatchQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueManager.m; sourceTree = "<group>"; };
+		00692AFD1DEEBBB000CBA5A4 /* DispatchSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchSourceManager.h; sourceTree = "<group>"; };
+		00692AFE1DEEBBB000CBA5A4 /* DispatchSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchSourceManager.m; sourceTree = "<group>"; };
+		0077AC5E1DDEAEE70029DC74 /* ReadyDependencyOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadyDependencyOperation.h; sourceTree = "<group>"; };
+		0077AC5F1DDEAEE70029DC74 /* ReadyDependencyOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadyDependencyOperation.m; sourceTree = "<group>"; };
+		00DF5B7A1DDD4FD20036E4A0 /* OperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationManager.h; sourceTree = "<group>"; };
+		00DF5B7B1DDD4FD20036E4A0 /* OperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationManager.m; sourceTree = "<group>"; };
+		00DF5B801DDD50400036E4A0 /* BasicOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicOperation.h; sourceTree = "<group>"; };
+		00DF5B811DDD50400036E4A0 /* BasicOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,9 @@
 		0044438B1DDC068A00F9D1B3 /* Concurrency */ = {
 			isa = PBXGroup;
 			children = (
+				00DF5B771DDD4F790036E4A0 /* DispatchQueue */,
+				00DF5B781DDD4F790036E4A0 /* DispatchSource */,
+				00DF5B791DDD4F790036E4A0 /* NSOperations */,
 				0044438F1DDC068A00F9D1B3 /* AppDelegate.h */,
 				004443901DDC068A00F9D1B3 /* AppDelegate.m */,
 				004443921DDC068A00F9D1B3 /* ViewController.h */,
@@ -77,6 +98,39 @@
 				0044438D1DDC068A00F9D1B3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00DF5B771DDD4F790036E4A0 /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				005113811DE7F0CD00FD556B /* DispatchQueueManager.h */,
+				005113821DE7F0CD00FD556B /* DispatchQueueManager.m */,
+			);
+			path = DispatchQueue;
+			sourceTree = "<group>";
+		};
+		00DF5B781DDD4F790036E4A0 /* DispatchSource */ = {
+			isa = PBXGroup;
+			children = (
+				00692AFD1DEEBBB000CBA5A4 /* DispatchSourceManager.h */,
+				00692AFE1DEEBBB000CBA5A4 /* DispatchSourceManager.m */,
+			);
+			path = DispatchSource;
+			sourceTree = "<group>";
+		};
+		00DF5B791DDD4F790036E4A0 /* NSOperations */ = {
+			isa = PBXGroup;
+			children = (
+				00DF5B7A1DDD4FD20036E4A0 /* OperationManager.h */,
+				00DF5B7B1DDD4FD20036E4A0 /* OperationManager.m */,
+				00DF5B801DDD50400036E4A0 /* BasicOperation.h */,
+				00DF5B811DDD50400036E4A0 /* BasicOperation.m */,
+				00146E8E1DDDA8CC00981A48 /* DependencyOperation.h */,
+				00146E8F1DDDA8CC00981A48 /* DependencyOperation.m */,
+				0077AC5E1DDEAEE70029DC74 /* ReadyDependencyOperation.h */,
+				0077AC5F1DDEAEE70029DC74 /* ReadyDependencyOperation.m */,
+			);
+			path = NSOperations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00146E901DDDA8CC00981A48 /* DependencyOperation.m in Sources */,
+				005113831DE7F0CD00FD556B /* DispatchQueueManager.m in Sources */,
 				004443941DDC068A00F9D1B3 /* ViewController.m in Sources */,
+				00DF5B7C1DDD4FD20036E4A0 /* OperationManager.m in Sources */,
 				004443911DDC068A00F9D1B3 /* AppDelegate.m in Sources */,
 				0044438E1DDC068A00F9D1B3 /* main.m in Sources */,
+				00692AFF1DEEBBB000CBA5A4 /* DispatchSourceManager.m in Sources */,
+				0077AC601DDEAEE70029DC74 /* ReadyDependencyOperation.m in Sources */,
+				00DF5B821DDD50400036E4A0 /* BasicOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Concurrency/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ytx.Concurrency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Concurrency/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ytx.Concurrency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +363,7 @@
 				004443A21DDC068A00F9D1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

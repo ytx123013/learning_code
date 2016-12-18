@@ -10,4 +10,23 @@
 
 @interface DispatchQueueManager : NSObject
 
+@property (nonatomic,strong) dispatch_queue_t concurrencyQueue;
+@property (nonatomic,strong) dispatch_queue_t serialQueue;
+
++ (instancetype)sharedManager;
+
+- (void)simpleConcurrencyTest;
+
+- (void)simpleSerialTest;
+
+- (void)iterationTest;
+
+- (void)gcdSuspend;
+
+- (void)gcdResumed;
+
+- (void)gcdGroupWait;
+
+- (void)gcdSemaphoreLock;
+
 @end

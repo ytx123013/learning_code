@@ -18,6 +18,7 @@
 #include "CVLapulaceOperations.hpp"
 #include "CVCannyOperations.hpp"
 #include "CVRemappingOperations.hpp"
+#include "HistogramOperations.hpp"
 
 @interface CVObjecCConvert : NSObject
 
@@ -27,6 +28,8 @@
 - (cv::Mat)grayMatFromOriImage;
 - (cv::Mat)rgbMatFromOriImage;
 - (cv::Mat)rgbaMatFromOriImage;
+
+- (UIImage *)getGrayImage;
 
 - (UIImage *)maskOperation;
 - (UIImage *)getLinearBlendingImage;
@@ -47,5 +50,9 @@
 - (UIImage *)getRLReverseImage;
 - (UIImage *)getUDReverseImage;
 - (UIImage *)getLRUDReverseImage;
+
+- (UIImage *)getGrayHistogram;
+- (UIImage *)getHistogramEqualization;
+- (UIImage *)getEqualizationHistogram;
 
 @end

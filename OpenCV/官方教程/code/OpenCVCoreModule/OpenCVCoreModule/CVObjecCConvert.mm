@@ -10,6 +10,11 @@
 
 @implementation CVObjecCConvert
 
+- (UIImage *)getGrayImage
+{
+    return [CVImageConvert UIGrayImageFromUIImage:self.oriImage];
+}
+
 - (cv::Mat)grayMatFromOriImage
 {
     cv::Mat grayMat = [CVImageConvert cvGrayMatFromUIImage:self.oriImage];
@@ -153,6 +158,32 @@
     cv::Mat img2;
     applyLRUDReverse(img, img2);
     return [CVImageConvert UIImageFromCVMat:img2];
+}
+
+- (UIImage *)getGrayHistogram
+{
+    cv::Mat img = [self grayMatFromOriImage];
+    cv::Mat img2;
+    applyCalcGrayHistogram(img, img2);
+    return [CVImageConvert UIImageFromCVMat:img2];
+
+}
+
+- (UIImage *)getHistogramEqualization
+{
+    cv::Mat img = [self grayMatFromOriImage];
+    cv::Mat img2;
+    applyHistogramEqualization(img, img2);
+    return [CVImageConvert UIImageFromCVMat:img2];
+}
+
+- (UIImage *)getEqualizationHistogram
+{
+    cv::Mat img = [self grayMatFromOriImage];
+    cv::Mat img2,img3;
+    applyHistogramEqualization(img, img2);
+    applyCalcGrayHistogram(img2, img3);
+    return [CVImageConvert UIImageFromCVMat:img3];
 }
 
 @end

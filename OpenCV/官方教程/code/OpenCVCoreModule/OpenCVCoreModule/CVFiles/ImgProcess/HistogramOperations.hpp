@@ -15,4 +15,6 @@ using namespace cv;
 
 void applyCalcGrayHistogram(Mat &image,Mat &histImage);
 
+void applyHistogramEqualization(Mat &image,Mat &resImage);
+
 #endif /* HistogramOperations_hpp */

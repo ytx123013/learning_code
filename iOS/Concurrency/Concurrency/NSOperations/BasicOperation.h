@@ -10,4 +10,8 @@
 
 @interface BasicOperation : NSOperation
 
+- (instancetype)initWithName:(NSString *)operationName;
+
+- (void)printOperation;
+
 @end

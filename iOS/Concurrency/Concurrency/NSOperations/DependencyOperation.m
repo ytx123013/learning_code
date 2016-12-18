@@ -10,4 +10,11 @@
 
 @implementation DependencyOperation
 
+- (void)printOperation
+{
+    sleep(3);
+    NSLog(@"Operation %@ work",self.name);
+    sleep(2);
+}
+
 @end

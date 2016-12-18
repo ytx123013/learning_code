@@ -8,6 +8,28 @@
 
 #import "ReadyDependencyOperation.h"
 
+@interface ReadyDependencyOperation()
+{
+    BOOL                 isReady;
+}
+
+@end
+
 @implementation ReadyDependencyOperation
+
+- (void)readyToOperate
+{
+    [self willChangeValueForKey:@"isReady"];
+    
+    isReady = YES;
+    
+    [self didChangeValueForKey:@"isReady"];
+}
+
+- (BOOL)isReady
+{
+    return isReady;
+}
+
 
 @end

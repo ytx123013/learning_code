@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.oriImage = [UIImage imageNamed:@"333.jpg"];
+    self.oriImage = [UIImage imageNamed:@"111.jpg"];
     self.img1.image = self.oriImage;
     
     self.convert = [[CVObjecCConvert alloc] init];
@@ -57,9 +57,13 @@
 //    [self cannyDetect];
     
     //remapping
-    [self LRReverse];
+//    [self LRReverse];
 //    [self UDReverse];
-    [self LRUDReverse];
+//    [self LRUDReverse];
+    
+    //直方图操作
+//    [self grayHist];
+    [self histEqualization];
     
 }
 
@@ -138,6 +142,21 @@
 - (void)LRUDReverse
 {
     self.img3.image = [self.convert getLRUDReverseImage];
+}
+
+- (void)grayHist
+{
+    self.img2.image = [self.convert getGrayImage];
+    self.img3.image = [self.convert getGrayHistogram];
+}
+     
+- (void)histEqualization
+{
+/*    self.img2.image = [self.convert getGrayImage];
+    self.img3.image = [self.convert getHistogramEqualization];*/
+    
+    self.img2.image = [self.convert getGrayHistogram];
+    self.img3.image = [self.convert getEqualizationHistogram];
 }
 
 - (void)didReceiveMemoryWarning {

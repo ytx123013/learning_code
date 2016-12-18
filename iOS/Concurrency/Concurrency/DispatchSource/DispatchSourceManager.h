@@ -10,4 +10,6 @@
 
 @interface DispatchSourceManager : NSObject
 
++ (instancetype)sharedManager;
+
 @end
