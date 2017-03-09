@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "001AA3CF1DD1C7CC00D0630D"
+               BlueprintIdentifier = "26F52D2A1E63210000EDDA98"
                BuildableName = "CoreDataTest.app"
                BlueprintName = "CoreDataTest"
                ReferencedContainer = "container:CoreDataTest.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "001AA3CF1DD1C7CC00D0630D"
+            BlueprintIdentifier = "26F52D2A1E63210000EDDA98"
             BuildableName = "CoreDataTest.app"
             BlueprintName = "CoreDataTest"
             ReferencedContainer = "container:CoreDataTest.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "001AA3CF1DD1C7CC00D0630D"
+            BlueprintIdentifier = "26F52D2A1E63210000EDDA98"
             BuildableName = "CoreDataTest.app"
             BlueprintName = "CoreDataTest"
             ReferencedContainer = "container:CoreDataTest.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "001AA3CF1DD1C7CC00D0630D"
+            BlueprintIdentifier = "26F52D2A1E63210000EDDA98"
             BuildableName = "CoreDataTest.app"
             BlueprintName = "CoreDataTest"
             ReferencedContainer = "container:CoreDataTest.xcodeproj">
